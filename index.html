@@ -40,7 +40,7 @@
 
       <!-- Section 1 -->
       <section class="section1">
-        <img src="./img/earth.png" class="earth-bg" />
+        <img src="./img/earth.png" class="earth-bg" id="earth-section" />
         <div class="title-container">
           <div class="space-row">
             <span class="title">SPACE</span>
@@ -1040,15 +1040,32 @@
         >
         <div class="ending-text ending-text7">
           <span
-            >“탐험은 우리의 본성이다. 우리는 떠돌이로 시작했고,<br />여전히
-            떠돌이로 남아 있다.”
+            >탐험은 우리의 본성이다. 우리는 떠돌이로 시작했고,<br />여전히
+            떠돌이로 남아 있다.
           </span>
           <p>Carl Sagan (1934~1996)</p>
         </div>
       </section>
 
       <!-- Section 12 -->
-      <section class="section12"></section>
+      <footer class="section12 footer">
+        <img
+          src="./img/logo3.png"
+          alt="SPACE Odyssey Logo"
+          class="footer-logo"
+        />
+
+        <div class="footer-middle" id="backToEarth">
+          <img src="./img/footer-arrow.png" alt="Arrow" class="footer-arrow" />
+          <p class="footer-back">Back to the Earth</p>
+        </div>
+
+        <div class="footer-info">
+          <p>2025-1 Web Publishing Final Project</p>
+          <p>jasonjeong@seoultech.ac.kr</p>
+          <p>Copyright ⓒ 2025 JaeHyun Jeong. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
 
     <script>
@@ -1058,6 +1075,27 @@
         const cursor = document.getElementById("customCursor");
         const logo = document.getElementById("logo");
         const distanceDisplay = document.createElement("div");
+
+        let lastOverlayScrollX = scrollContainer.scrollLeft;
+
+        scrollContainer.addEventListener("scroll", () => {
+          const currentX = scrollContainer.scrollLeft;
+          const delta = currentX - lastOverlayScrollX;
+
+          const vw = window.innerWidth;
+          const threshold = 0.5 * vw; // ✅ 5vw 기준 (필요 시 0.03 ~ 0.08 사이로 조정 가능)
+
+          if (Math.abs(delta) > threshold) {
+            for (let i = 1; i <= 8; i++) {
+              const overlay = document.getElementById(`ship${i}Overlay`);
+              if (overlay && !overlay.classList.contains("hidden")) {
+                overlay.classList.add("hidden");
+              }
+            }
+
+            lastOverlayScrollX = currentX;
+          }
+        });
 
         // ✅ 거리 표시 요소 만들기
         distanceDisplay.id = "distanceIndicator";
@@ -1286,6 +1324,10 @@
               overlay.style.display = "none";
             }
           });
+        });
+
+        document.getElementById("backToEarth").addEventListener("click", () => {
+          targetScroll = 0;
         });
 
         logo.addEventListener("click", () => {

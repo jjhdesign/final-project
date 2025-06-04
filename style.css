@@ -258,7 +258,8 @@ section {
 
 .section12 {
   height: 100vh;
-  width: 30vw;
+  min-width: 28vw;
+  width: 28vw;
   background-color: #e91514;
 }
 
@@ -836,7 +837,9 @@ section {
   left: 500vw;
 }
 .ending-text7 {
-  left: 597.2vw;
+  left: 595vw;
+  z-index: 24;
+  background-color: #000;
 }
 
 /* 끝으로 이동 버튼 스타일 (2배 확대) */
@@ -860,4 +863,61 @@ section {
 
 .to-end-button:hover {
   background-color: #ffffff31;
+}
+
+.footer {
+  background-color: #e91514;
+  color: white;
+  padding-left: 2vw;
+}
+
+.footer-logo {
+  width: 17vw;
+  margin-bottom: 14vh;
+  margin-top: 6vw;
+}
+
+.footer-middle {
+  display: flex;
+  top: auto;
+  align-items: center; /* 세로축(y축) 정렬: 중앙 */
+  gap: 2vw;
+  margin-bottom: 30vh;
+}
+
+.footer-arrow {
+  width: 2vw;
+  height: 100%;
+}
+
+.footer-back {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 2vw;
+  color: white;
+  transition: color 0.3s ease; /* 부드럽게 색상 전환 */
+}
+
+.footer-back:hover {
+  color: #000000;
+}
+
+.footer-middle:hover .footer-arrow {
+  filter: brightness(0); /
+}
+
+.footer-middle:hover .footer-back {
+  color: #000000;
+}
+
+.footer-info p {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-size: 1vw;
+  line-height: 70%;
+  color: white;
+  bottom: 0;
 }
