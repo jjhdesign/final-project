@@ -1083,7 +1083,7 @@
           const delta = currentX - lastOverlayScrollX;
 
           const vw = window.innerWidth;
-          const threshold = 0.5 * vw; // ✅ 5vw 기준 (필요 시 0.03 ~ 0.08 사이로 조정 가능)
+          const threshold = 0.6 * vw; // ✅ 5vw 기준 (필요 시 0.03 ~ 0.08 사이로 조정 가능)
 
           if (Math.abs(delta) > threshold) {
             for (let i = 1; i <= 8; i++) {
