@@ -769,7 +769,7 @@ section {
 #pluto1:checked ~ .carousel-track {
   transform: translateX(0%);
 }
-#jpluto2:checked ~ .carousel-track {
+#pluto2:checked ~ .carousel-track {
   transform: translateX(-100%);
 }
 #pluto3:checked ~ .carousel-track {
