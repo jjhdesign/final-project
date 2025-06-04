@@ -253,6 +253,13 @@ section {
 }
 
 .section11 {
+  width: 630vw;
+}
+
+.section12 {
+  height: 100vh;
+  width: 30vw;
+  background-color: #e91514;
 }
 
 .main-bg {
@@ -324,6 +331,17 @@ section {
   width: fit-content;
   height: fit-content;
   cursor: pointer;
+}
+
+.ship8-wrapper {
+  position: sticky;
+  top: 40%;
+  left: 47vw;
+  margin-left: -830vw;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+  z-index: 5;
 }
 
 .ship1 {
@@ -780,4 +798,66 @@ section {
 #pluto2:checked ~ .arrow-2,
 #pluto3:checked ~ .arrow-3 {
   display: flex;
+}
+
+.ending-text {
+  font-size: 1vw;
+  color: white;
+  padding: 0.7vw;
+  width: 28vw;
+  margin-top: 1vw;
+  z-index: 4;
+  line-height: 150%;
+  text-align: center;
+  position: absolute;
+  top: auto;
+}
+
+.ending-text p {
+  font-family: "Oswald", sans-serif;
+}
+
+.ending-text1 {
+  left: 0;
+}
+.ending-text2 {
+  left: 100vw;
+}
+.ending-text3 {
+  left: 200vw;
+}
+.ending-text4 {
+  left: 300vw;
+}
+.ending-text5 {
+  left: 400vw;
+}
+.ending-text6 {
+  left: 500vw;
+}
+.ending-text7 {
+  left: 597.2vw;
+}
+
+/* 끝으로 이동 버튼 스타일 (2배 확대) */
+.to-end-button {
+  position: fixed;
+  top: 1.5vw;
+  right: 1.5vw;
+  width: 5vw;
+  height: 5vw;
+  min-width: 2.9vw;
+  min-height: 2.9vw;
+  max-width: 5vw;
+  max-height: 5vw;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  border-radius: 0.1vw;
+  cursor: pointer;
+  z-index: 10000;
+  transition: background-color 0.3s ease;
+}
+
+.to-end-button:hover {
+  background-color: #ffffff31;
 }

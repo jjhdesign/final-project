@@ -965,8 +965,11 @@
             </div>
           </div>
         </div>
+      </section>
 
-        <div class="ship-wrapper" id="ship8Wrapper">
+      <!-- Section 11 -->
+      <section class="section11">
+        <div class="ship8-wrapper" id="ship8Wrapper">
           <img src="./img/ship8.png" class="ship1" id="ship8" />
           <div class="ship-overlay-box hidden" id="ship8Overlay">
             <div class="ship1-bottom-text2">
@@ -1003,9 +1006,49 @@
             </div>
           </div>
         </div>
+
+        <span class="ending-text ending-text1"
+          >인류가 하늘을 올려다보기 오래전부터, 우주는 언제나 그 자리에
+          있었습니다. 그리고 우리는 아주 오랜 시간 동안, 그 침묵에 질문을
+          던져왔습니다.</span
+        >
+
+        <span class="ending-text ending-text2"
+          >인류가 보내온 탐사선은 그 질문에 대한 답을 찾기 위한 시도였습니다.
+          그들은 기약없는 여정을 꿈꾸며, 지구라는 작은 점에서 출발해 어둠 속의
+          또 다른 점들을 향해 나아갔습니다.</span
+        >
+
+        <span class="ending-text ending-text3"
+          >그 여정은 단순한 호기심을 넘어, 우리 인류가 스스로를 이해해가는
+          과정이자, 방황의 여정으로서의 의미를 지닙니다.</span
+        >
+
+        <span class="ending-text ending-text4"
+          >우리는 누구인가, 어디에서 비롯되었는가. 우주는 언제나 자신의 품을
+          내어주며, 인류 스스로가 답을 찾기를 기다리고 있습니다.</span
+        >
+
+        <span class="ending-text ending-text5"
+          >그리고 그 기다림에 응답하는 것은 결국, 다시 질문을 던질 용기를 가진
+          우리 인류입니다.</span
+        >
+
+        <span class="ending-text ending-text6"
+          >그렇기에 우리는 답을 찾기 전까지, 끝없이 우주를 떠돌아다닐 것입니다.
+          답을 찾아낼 그날까지.</span
+        >
+        <div class="ending-text ending-text7">
+          <span
+            >“탐험은 우리의 본성이다. 우리는 떠돌이로 시작했고,<br />여전히
+            떠돌이로 남아 있다.”
+          </span>
+          <p>Carl Sagan (1934~1996)</p>
+        </div>
       </section>
-      <!-- Section 11 -->
-      <section class="section11"></section>
+
+      <!-- Section 12 -->
+      <section class="section12"></section>
     </div>
 
     <script>
@@ -1249,6 +1292,14 @@
           targetScroll = 0;
         });
 
+        const toEndButton = document.getElementById("toEndButton");
+        toEndButton.addEventListener("click", () => {
+          const lastSection = document.querySelector(".section12");
+          if (lastSection) {
+            targetScroll = lastSection.offsetLeft;
+          }
+        });
+
         window.addEventListener("load", () => {
           setTimeout(() => {
             calculateShipPositions();
@@ -1263,5 +1314,6 @@
     </script>
 
     <div id="distanceIndicator"></div>
+    <div id="toEndButton" class="to-end-button"></div>
   </body>
 </html>
