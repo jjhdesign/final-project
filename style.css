@@ -499,7 +499,7 @@ section {
 }
 
 .overlay-box * {
-  z-index: inherit !important; /* ✅ 내부 요소도 위에 오게 */
+  /* z-index: inherit !important; ✅ 내부 요소도 위에 오게 */
 }
 
 .left-container {
